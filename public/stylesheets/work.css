@@ -1,0 +1,341 @@
+section{
+    margin-bottom: 50px;
+}
+
+section h3{
+    font-size: 30px;
+}
+
+
+/* =================================== introduction start =================================== */
+
+.intro h1{
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.intro p{
+    font-size: 18px;
+    color: var(--main-text-gray);
+    line-height: 25px;
+}
+
+.intro .span-highlight{
+    border: solid 0.8px var(--text-hightlight-border-color);
+    padding: 2px 6px;
+    border-radius: 8px;
+    background-color: var(--text-hightlight-bg-color);
+    color: var(--text-hightlight-color);
+    margin: 0 2px;
+}
+/* =================================== introduction end =================================== */
+
+/* =================================== skills start =================================== */
+
+.skill-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.skill-card{
+    /* border-bottom: solid 1px var(--card-lt-border-color); */
+    /* padding: 10px; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.skill-card:first-child{
+    margin-top: 0px;
+}
+
+.skill-el{
+    font-size: 14px;
+    font-style: italic;
+    color: var(--text-hightlight-color);
+    border: solid 1px var(--tag-border-color);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 0px 8px 8px 0px;
+    background-color:  var(--card-bg-color);
+}
+
+/* =================================== skills end =================================== */
+
+
+/* =================================== experience start =================================== */
+
+.experience-card{
+    display: flex;
+    margin-top: 40px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px ;
+    padding: 20px;
+}
+
+.experience-card:nth-child(2){
+    margin-top: 25px;
+}
+
+.experience-card .text-parent .head-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.experience-card .text-parent a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.experience-card .text-parent .exp-logo{
+    height: 40px;
+    cursor: pointer;
+}
+
+.experience-card .text-parent .click-icon{
+    cursor: pointer;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.experience-card .text-parent .duration{
+    color: var(--main-text-gray);
+    font-size: 14px;
+}
+
+
+.experience-card .text-parent .exp-el div{
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--card-text-color);
+    margin-bottom: 8px;
+}
+
+.experience-card .text-parent .exp-el:last-child div{
+    margin-bottom: 0px;
+}
+
+.experience-card .text-parent .exp-el{
+    display: flex;
+    align-items: flex-start;
+}
+
+.experience-card .text-parent .exp-el img{
+    height: 18px;
+    margin-right: 8px;
+    padding-top: 2px;
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .experience-card .text-parent .exp-logo{
+        height: 32px;
+    }
+}
+/* =================================== experience stop =================================== */
+
+/* =================================== projects start =================================== */
+
+
+.projects-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projects-card{
+    width: 48%;
+    flex-wrap: wrap;
+    display: flex;
+    /* margin-top: 40px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px ; */
+    padding: 20px;
+    justify-content: flex-start;
+    margin-top: 25px;
+    border: solid 1px var(--card-lt-border-color);
+    border-radius: 20px ;
+    margin-bottom: 8px;
+}
+
+.projects-card:last-child{
+    margin-bottom: 0px;
+}
+
+.projects-card:nth-child(2){
+    /* margin-top: 25px; */
+
+    margin-top: 20px;
+}
+
+.projects-card img{
+    height: 32px;
+}
+
+.projects-card .text-parent{
+    /* padding: 0 120px 0 30px; */
+    padding: 0 30px;
+    /* width: 400px; */
+
+    padding: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.projects-card .text-parent h4{
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: var(--card-heading-color);
+    font-weight: 600;
+}
+
+.projects-card .text-parent .text{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--card-text-color);
+    margin-bottom: 16px;
+    font-weight: 200;
+}
+
+.projects-card .text-parent .tag-parent{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.projects-card .text-parent .tag-parent span{
+    font-size: 12px;
+    font-style: italic;
+    color: var(--text-hightlight-color);
+    border: solid 1px var(--tag-border-color);
+    border-radius: 3px;
+    padding: 2px 5px;
+    margin: 0px 8px 8px 0px;
+    background-color:  var(--card-bg-color);
+}
+
+.projects-card .text-parent .links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects-card .text-parent .links a{
+    color: var(--main-text-gray);
+    text-decoration: none;
+    border-bottom: solid 1px var(--main-text-gray);
+}
+
+.projects-card .text-parent .links a img{
+    height: 15px;
+    margin-left: 5px;
+}
+
+.projects .show-more{
+    width: auto;
+    text-align: center;
+    color: var(--text-hightlight-color);
+    margin-top: 20px;
+}
+
+.projects .show-more button{
+    background-color: transparent;
+    outline: none;
+    color: var(--text-hightlight-color);
+    border: none;
+    border-bottom: double 1px var(--tag-border-color);
+	padding: 0;
+    padding-bottom: 5px;
+	font: inherit;
+	cursor: pointer;
+    font-weight: 200;
+}
+
+.projects .show-more img{
+    height: 15px;
+    vertical-align: middle;
+}
+
+.projects .show-more img.invert{
+    transform: rotateX(180deg)
+}
+
+@media (max-width: 1024px) {
+    .projects-card{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+}
+
+/* =================================== projects end =================================== */
+
+/* =================================== testimonials start =================================== */
+
+.testimonials h3{
+    margin-bottom: 25px;
+}
+
+.testimonials-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin-top: 40px; */
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px ;
+    padding: 20px;
+    height: 240px;
+    color: var(--text-hightlight-color);
+}
+
+.testimonials-card .text-parent{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+.testimonials-card .head-wrap{
+    display: flex;
+}
+
+.testimonials-card .head-wrap .test-logo{
+    height: 60px;
+    border-radius: 50px;
+}
+
+.testimonials-card .head-wrap .details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+    /* font-weight: 400; */
+}
+
+.testimonials-card .head-wrap .details .name{
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.testimonials-card .head-wrap .details .designation{
+    font-size: 14px;
+}
+
+.pagination-styles{
+    bottom: -30px;
+}
+
+
+@media (max-width: 1024px) {
+    .testimonials-card{
+        height: 360px;
+    }
+}
+
+/* =================================== testimonials end =================================== */

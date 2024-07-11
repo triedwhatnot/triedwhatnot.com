@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <!-- <script src="./contact.js"></script> -->
+    <script src="/javascripts/common.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous">
+
+    <link href="/stylesheets/contact.css" rel="stylesheet">
+    <link href="/stylesheets/common.css" rel="stylesheet">
+</head>
+<body class="dark">
+
+    <!-- header start -->
+    <%- include('partials/header.ejs') %>
+    <!-- header end -->
+
+    <div class="content-section">
+
+        <section class="intro">
+            <h1>Contact</h1>
+            <p>Got a question or proposal, or just want to say hello? Go ahead, send me a message.</p>
+        </section>
+
+        <!-- contact start -->
+        <section class="contact" id="contact">
+            <%- include('partials/contact-form.ejs') %>
+        </section>
+        <!-- contact end -->
+
+        <!-- footer start -->
+        <%- include('partials/footer.ejs') %>
+        <!-- footer end -->
+    </div>
+    
+    
+</body>
+</html>

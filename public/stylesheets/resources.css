@@ -1,0 +1,222 @@
+/* =================================== introduction start =================================== */
+
+.intro{
+    margin-bottom: 50px;
+}
+
+.intro h1{
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.intro p{
+    font-size: 18px;
+    color: var(--main-text-gray);
+    line-height: 25px;
+}
+
+.intro .span-highlight{
+    border: solid 0.8px var(--text-hightlight-border-color);
+    padding: 2px 6px;
+    border-radius: 8px;
+    background-color: var(--text-hightlight-bg-color);
+    color: var(--text-hightlight-color);
+    margin: 0 2px;
+}
+/* =================================== introduction end =================================== */
+
+#newsletter .text-parent a{
+    color: var(--main-text-gray);
+    text-decoration: none;
+    border-bottom: solid 1px var(--main-text-gray);
+}
+
+#newsletter .text-parent img{
+    height: 15px;
+    margin-left: 5px;
+}
+
+/* =================================== inspiration start =================================== */
+
+.inspiration {
+    margin-bottom: 50px;
+}
+
+.inspiration h3{
+    font-size: 30px;
+}
+
+.inspiration-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.inspiration-card{
+    width: 48%;
+    flex-wrap: wrap;
+    display: flex;
+    /* margin-top: 40px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px ; */
+    padding: 20px;
+
+    /* flex-direction: column; */
+    padding: 30px 20px;
+    justify-content: center;
+    margin-top: 25px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px ;
+    margin-bottom: 15px;
+}
+
+.inspiration-card:last-child{
+    margin-bottom: 0px;
+}
+
+.inspiration-card:nth-child(2){
+    /* margin-top: 25px; */
+
+    margin-top: 20px;
+}
+
+.inspiration-card .img-parent{
+    display: flex;
+    justify-content: center;
+    height: 220px;
+}
+
+.inspiration-card .img-parent img{
+    height: 220px;
+}
+
+.inspiration-card .text-parent{
+    /* padding: 0 120px 0 30px; */
+    padding: 0 30px;
+    /* width: 400px; */
+
+    padding: 5px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.inspiration-card .text-parent h4{
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--card-heading-color);
+}
+
+.inspiration-card .text-parent div{
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--card-text-color);
+    margin-bottom: 10px;
+}
+
+.inspiration-card .text-parent img{
+    height: 30px;
+    cursor: pointer;
+    /* position: relative;
+    left: 10px; */
+}
+
+
+/* =================================== inspiration end =================================== */
+
+
+/* =================================== podcast start =================================== */
+
+.podcast {
+    margin-bottom: 50px;
+}
+
+.podcast h3{
+    font-size: 30px;
+}
+
+.podcast-card{
+    display: flex;
+    margin-top: 40px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px ;
+    padding: 20px;
+}
+
+.podcast-card:nth-child(2){
+    margin-top: 25px;
+}
+
+.podcast-card .img-parent{
+    height: 220px;
+}
+
+.podcast-card .img-parent img{
+    height: 220px;
+}
+
+.podcast-card .text-parent{
+    /* padding: 0 120px 0 30px; */
+    padding: 0 30px;
+    width: 400px;
+}
+
+.podcast-card .text-parent h4{
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--card-heading-color);
+}
+
+.podcast-card .text-parent div{
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--card-text-color);
+    margin-bottom: 10px;
+}
+
+.podcast-card .text-parent img{
+    height: 30px;
+    cursor: pointer;
+    /* position: relative;
+    left: 10px; */
+}
+
+
+/* =================================== podcast end =================================== */
+
+
+@media (max-width: 1024px) {
+    .inspiration-card{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    /* .podcast{
+        margin-bottom: 65px;
+    } */
+
+    .podcast-card{
+        flex-direction: column;
+        padding: 30px 20px;
+        justify-content: center;
+        margin-top: 20px;
+        border: solid 1px var(--card-border-color);
+        border-radius: 20px ;
+    }
+
+    .podcast-card:nth-child(2){
+        margin-top: 20px;
+    }
+
+    .podcast-card .img-parent{
+        display: flex;
+        justify-content: center;
+        height: 220px;
+    }
+
+    .podcast-card .text-parent{
+        padding: 5px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}

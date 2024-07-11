@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <script src="/javascripts/home.js"></script>
+    <script src="/javascripts/common.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous">
+
+    <link href="/stylesheets/common.css" rel="stylesheet">
+    <link href="/stylesheets/home.css" rel="stylesheet">
+</head>
+<body class="dark">
+
+    <!-- header start -->
+    <%- include('partials/header.ejs') %>
+    <!-- header end -->
+
+    <div class="content-section">
+
+        <section class="intro">
+            <div class="left">
+                <h1>Shubham Gupta</h1>
+                <p class="headline">Learn, Build and Collaborate</p>
+                <p class="desc">Software Engineer experienced in <span class="span-highlight">Frontend</span> engineering tech and maintaining high-traffic website in Fintech industry.</p>
+            </div>
+            <div class="right">
+                <img src="/images/home_pic.png" />
+            </div>
+        </section>
+
+
+
+        <!-- blogs start -->
+        <section class="blogs" id="blogs">
+            <div class="blog-head">
+                <h3>Recent Blogs</h3>
+                <div class="show-more" id="show-more-blogs">
+                    <button>view more <img src="/icons/arrow-down.svg"/></button>
+                </div>
+            </div>
+
+            <div id="blog-splide" class="splide" role="group" aria-label="blogs carousel">
+                <div class="splide__track">
+                      <ul class="splide__list">
+
+                        <div class="blogs-card splide__slide">
+                            <a class="text-parent" target="_blank" href="https://www.linkedin.com/posts/triedwhatnot_webdev-performanceoptimisation-webvitals-activity-7198291369038159872-QU9H?utm_source=share&utm_medium=member_desktop">
+                                Interaction to Next Paint: A new update in core web vitals.
+                            </a>
+                            <a class="text-parent" target="_blank" href="https://www.linkedin.com/posts/triedwhatnot_seo-websitetips-activity-7195724722435760129--Haj?utm_source=share&utm_medium=member_desktop">
+                                5 Simple SEO tips to boost your website's visibility on search engines. 
+                            </a>
+                        </div>
+
+                        <div class="blogs-card splide__slide">
+                            <a class="text-parent" target="_blank" href="https://www.linkedin.com/posts/triedwhatnot_leadership-culture-innovation-activity-7195439307174678528-SFx6?utm_source=share&utm_medium=member_desktop">
+                                No Rules Rules: Netflix and the culture of reinvention.
+                            </a>
+                            <a class="text-parent" target="_blank" href="https://www.linkedin.com/posts/triedwhatnot_tailwindcss-css-webdevelopement-activity-7196419069707755520-1Swq?utm_source=share&utm_medium=member_desktop">
+                                Why Tailwind CSS seems to be a top choice to style your app these days.
+                            </a>
+                        </div>
+
+                        <div class="blogs-card splide__slide">
+                            <a class="text-parent" target="_blank" href="https://www.linkedin.com/posts/triedwhatnot_webdevelopment-renderingpatterns-ssr-activity-7196094403285823490-qhvr?utm_source=share&utm_medium=member_desktop">
+                                Rendering Patterns: Key to crafting efficient and scalable web apps!  
+                            </a>
+                            <a class="text-parent" target="_blank" href="https://www.linkedin.com/posts/triedwhatnot_dsa-algorithms-activity-7196855370785394691-OcPr?utm_source=share&utm_medium=member_desktop">
+                                A great tool to visualise Data Structures and Algorithms! 
+                            </a>
+                        </div>
+
+
+                        <div class="blogs-card splide__slide">
+                            <a class="text-parent" target="_blank" href="https://www.linkedin.com/posts/triedwhatnot_dreamwithyoureyesopen-ronniescrewvala-entrepreneurship-activity-7197845950353018880-nu0F?utm_source=share&utm_medium=member_desktop">
+                                Dream with your eyes open, Ronnie Screwvala
+                            </a>
+                            <a class="text-parent" target="_blank" href="https://www.linkedin.com/posts/triedwhatnot_backtracking-algorithm-interviews-activity-7197261600058167296-vAkF?utm_source=share&utm_medium=member_desktop">
+                                A guide to Backtracking problems in your DSA interview. 
+                            </a>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- blogs end -->
+
+        <!-- skills start -->
+        <%- include('partials/skills.ejs') %>
+        <!-- skills end -->
+
+        <!-- experience start -->
+        <section class="experience" id="experience">
+            <h3>Experience</h3>
+
+            <div class="experience-card">
+                <div class="text-parent">
+                    <div class="head-wrap">
+                        <a target="_blank" href="https://www.linkedin.com/company/et_money/">
+                            <img class="exp-logo" src="/icons/etmoney.svg" />
+                            <img class="click-icon" src="/icons/click-link.svg" />
+                        </a>
+                        <div class="duration">Jan 20 - Sept 23</div>
+                    </div>
+                    <div class="exp-el">
+                        <img src="/icons/tick.svg" />
+                        <div>Built TailwindMasterKit, A SaaS marketplace for beautiful, handcrafted Website components built within and for Tailwind supported websites. Built the components from the ground up for React and HTML in 30+ categories.</div>
+                    </div>
+                    <div class="exp-el">
+                        <img src="/icons/tick.svg" />
+                        <div>Built TailwindMasterKit, A SaaS marketplace for beautiful, handcrafted Website components built within and for Tailwind supported websites. Built the components from the ground up for React and HTML in 30+ categories.</div>
+                    </div>
+                    <div class="exp-el">
+                        <img src="/icons/tick.svg" />
+                        <div>Built TailwindMasterKit, A SaaS marketplace for beautiful, handcrafted Website components built within and for Tailwind supported websites. Built the components from the ground up for React and HTML in 30+ categories.</div>
+                    </div>
+                    <div class="exp-el">
+                        <img src="/icons/tick.svg" />
+                        <div>Built TailwindMasterKit, A SaaS marketplace for beautiful, handcrafted Website components built within and for Tailwind supported websites. Built the components from the ground up for React and HTML in 30+ categories.</div>
+                    </div>
+                    <div class="exp-el">
+                        <img src="/icons/tick.svg" />
+                        <div>Built TailwindMasterKit, A SaaS marketplace for beautiful, handcrafted Website components built within and for Tailwind supported websites. Built the components from the ground up for React and HTML in 30+ categories.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="show-more" id="show-more-exp">
+                <button>view more <img src="/icons/arrow-down.svg"/></button>
+            </div>
+        </section>
+        <!-- experience end -->
+
+        <!-- projects start -->
+        <section class="projects" id="projects">
+            <h3>Projects</h3>
+
+            <div class="projects-wrapper">
+
+                <div class="projects-card">
+                    <img src="/icons/testing-suite.svg" />
+                    <div class="text-parent">
+                        <h4>React Testing Suite</h4>
+                        <div class="text">Aimed to write functional and regression tests for react app using react testing library - Unit, Integration and E2E tests included. 90+ test cases with 100% coverage.</div>
+                        <div class="tag-parent">
+                            <span>React Testing Library</span>
+                            <span>Jest</span>
+                            <span>JS-DOM</span>
+                            <span>Jest-DOM</span>
+                        </div>
+                        <div class="links">  
+                            <a href="https://tldr.tech/" target="_blank">Github<img src="/icons/click-link.svg" /></a>
+                            <a href="https://tldr.tech/" target="_blank">Demo<img src="/icons/click-link.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-card">
+                    <img src="/icons/openai.svg" />
+                    <div class="text-parent">
+                        <h4>Voice2Post</h4>
+                        <div class="text">Jot down whatever you speak, edit it and finally, use OpenAI's ChatGPT-3.5 to enhance your text for LinkedIn, Twitter or use any custom prompt. Then, just copy and post!</div>
+                        <div class="tag-parent">
+                            <span>GPT-3.5</span>
+                            <span>Web Speech API</span>
+                            <span>Tailwind CSS</span>
+                            <span>React</span>
+                        </div>
+                        <div class="links">  
+                            <a href="https://tldr.tech/" target="_blank">Github<img src="/icons/click-link.svg" /></a>
+                            <a href="https://tldr.tech/" target="_blank">Demo<img src="/icons/click-link.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-card">
+                    <img src="/icons/testing-suite.svg" />
+                    <div class="text-parent">
+                        <h4>Budgety</h4>
+                        <div class="text">Track your monthly budget by adding individual income and expense, in order to manage your money more efficiently. Also, view each expense as a percentage of your total income.</div>
+                        <div class="tag-parent">
+                            <span>Vanilla JS</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Math</span>
+                        </div>
+                        <div class="links">  
+                            <a href="https://tldr.tech/" target="_blank">Github<img src="/icons/click-link.svg" /></a>
+                            <a href="https://tldr.tech/" target="_blank">Demo<img src="/icons/click-link.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-card">
+                    <img src="/icons/testing-suite.svg" />
+                    <div class="text-parent">
+                        <h4>Tic-Tac-Toe</h4>
+                        <div class="text">Same old all-time favorite 2-player game, which calculates winner in O(1) time complexity.</div>
+                        <div class="tag-parent">
+                            <span>React Testing Library</span>
+                            <span>Jest</span>
+                            <span>Vite</span>
+                            <span>React</span>
+                            <span>JS-DOM</span>
+                            <span>Jest-DOM</span>
+                        </div>
+                        <div class="links">  
+                            <a href="https://tldr.tech/" target="_blank">Github<img src="/icons/click-link.svg" /></a>
+                            <a href="https://tldr.tech/" target="_blank">Demo<img src="/icons/click-link.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-card hide">
+                    <img src="/icons/testing-suite.svg" />
+                    <div class="text-parent">
+                        <h4>React Testing Suite</h4>
+                        <div class="text">Aimed to write functional and regression tests for react app using react testing library - Unit, Integration and E2E tests included.</div>
+                        <div class="tag-parent">
+                            <span>React Testing Library</span>
+                            <span>Jest</span>
+                            <span>Vite</span>
+                            <span>React</span>
+                            <span>JS-DOM</span>
+                            <span>Jest-DOM</span>
+                        </div>
+                        <div class="links">  
+                            <a href="https://tldr.tech/" target="_blank">Github<img src="/icons/click-link.svg" /></a>
+                            <a href="https://tldr.tech/" target="_blank">Demo<img src="/icons/click-link.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-card hide">
+                    <img src="/icons/testing-suite.svg" />
+                    <div class="text-parent">
+                        <h4>React Testing Suite</h4>
+                        <div class="text">Aimed to write functional and regression tests for react app using react testing library - Unit, Integration and E2E tests included.</div>
+                        <div class="tag-parent">
+                            <span>React Testing Library</span>
+                            <span>Jest</span>
+                            <span>Vite</span>
+                            <span>React</span>
+                            <span>JS-DOM</span>
+                            <span>Jest-DOM</span>
+                        </div>
+                        <div class="links">  
+                            <a href="https://tldr.tech/" target="_blank">Github<img src="/icons/click-link.svg" /></a>
+                            <a href="https://tldr.tech/" target="_blank">Demo<img src="/icons/click-link.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-card hide">
+                    <img src="/icons/testing-suite.svg" />
+                    <div class="text-parent">
+                        <h4>React Testing Suite</h4>
+                        <div class="text">Aimed to write functional and regression tests for react app using react testing library - Unit, Integration and E2E tests included.</div>
+                        <div class="tag-parent">
+                            <span>React Testing Library</span>
+                            <span>Jest</span>
+                            <span>Vite</span>
+                            <span>React</span>
+                            <span>JS-DOM</span>
+                            <span>Jest-DOM</span>
+                        </div>
+                        <div class="links">  
+                            <a href="https://tldr.tech/" target="_blank">Github<img src="/icons/click-link.svg" /></a>
+                            <a href="https://tldr.tech/" target="_blank">Demo<img src="/icons/click-link.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-card hide">
+                    <img src="/icons/testing-suite.svg" />
+                    <div class="text-parent">
+                        <h4>React Testing Suite</h4>
+                        <div class="text">Aimed to write functional and regression tests for react app using react testing library - Unit, Integration and E2E tests included.</div>
+                        <div class="tag-parent">
+                            <span>React Testing Library</span>
+                            <span>Jest</span>
+                            <span>Vite</span>
+                            <span>React</span>
+                            <span>JS-DOM</span>
+                            <span>Jest-DOM</span>
+                        </div>
+                        <div class="links">  
+                            <a href="https://tldr.tech/" target="_blank">Github<img src="/icons/click-link.svg" /></a>
+                            <a href="https://tldr.tech/" target="_blank">Demo<img src="/icons/click-link.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-card hide">
+                    <img src="/icons/testing-suite.svg" />
+                    <div class="text-parent">
+                        <h4>React Testing Suite</h4>
+                        <div class="text">Aimed to write functional and regression tests for react app using react testing library - Unit, Integration and E2E tests included.</div>
+                        <div class="tag-parent">
+                            <span>React Testing Library</span>
+                            <span>Jest</span>
+                            <span>Vite</span>
+                            <span>React</span>
+                            <span>JS-DOM</span>
+                            <span>Jest-DOM</span>
+                        </div>
+                        <div class="links">  
+                            <a href="https://tldr.tech/" target="_blank">Github<img src="/icons/click-link.svg" /></a>
+                            <a href="https://tldr.tech/" target="_blank">Demo<img src="/icons/click-link.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-card hide">
+                    <img src="/icons/testing-suite.svg" />
+                    <div class="text-parent">
+                        <h4>React Testing Suite</h4>
+                        <div class="text">Aimed to write functional and regression tests for react app using react testing library - Unit, Integration and E2E tests included.</div>
+                        <div class="tag-parent">
+                            <span>React Testing Library</span>
+                            <span>Jest</span>
+                            <span>Vite</span>
+                            <span>React</span>
+                            <span>JS-DOM</span>
+                            <span>Jest-DOM</span>
+                        </div>
+                        <div class="links">  
+                            <a href="https://tldr.tech/" target="_blank">Github<img src="/icons/click-link.svg" /></a>
+                            <a href="https://tldr.tech/" target="_blank">Demo<img src="/icons/click-link.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-card hide">
+                    <img src="/icons/testing-suite.svg" />
+                    <div class="text-parent">
+                        <h4>React Testing Suite</h4>
+                        <div class="text">Aimed to write functional and regression tests for react app using react testing library - Unit, Integration and E2E tests included.</div>
+                        <div class="tag-parent">
+                            <span>React Testing Library</span>
+                            <span>Jest</span>
+                            <span>Vite</span>
+                            <span>React</span>
+                            <span>JS-DOM</span>
+                            <span>Jest-DOM</span>
+                        </div>
+                        <div class="links">  
+                            <a href="https://tldr.tech/" target="_blank">Github<img src="/icons/click-link.svg" /></a>
+                            <a href="https://tldr.tech/" target="_blank">Demo<img src="/icons/click-link.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-card hide">
+                    <img src="/icons/testing-suite.svg" />
+                    <div class="text-parent">
+                        <h4>React Testing Suite</h4>
+                        <div class="text">Aimed to write functional and regression tests for react app using react testing library - Unit, Integration and E2E tests included.</div>
+                        <div class="tag-parent">
+                            <span>React Testing Library</span>
+                            <span>Jest</span>
+                            <span>Vite</span>
+                            <span>React</span>
+                            <span>JS-DOM</span>
+                            <span>Jest-DOM</span>
+                        </div>
+                        <div class="links">  
+                            <a href="https://tldr.tech/" target="_blank">Github<img src="/icons/click-link.svg" /></a>
+                            <a href="https://tldr.tech/" target="_blank">Demo<img src="/icons/click-link.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="show-more" id="show-more-projects">
+                <button>view more <img src="/icons/arrow-down.svg"/></button>
+            </div>
+        </section>
+        <!-- projects end -->
+
+
+        <!-- testimonials start -->
+        <section class="testimonials" id="testimonials">
+            <h3>Testimonials</h3>
+
+            <div id="testimonials-splide" class="splide" role="group" aria-label="testimonials carousel">
+                <div class="splide__track">
+                      <ul class="splide__list">
+                        <%- include('partials/testimonials.ejs') %>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- testimonials end -->
+
+
+        <!-- contact start -->
+        <section class="contact" id="contact">
+            <h3>Contact</h3>
+            <%- include('partials/contact-form.ejs') %>
+        </section>
+        <!-- contact end -->
+
+        <!-- footer start -->
+        <%- include('partials/footer.ejs') %>
+        <!-- footer end -->
+    </div>
+    
+    
+</body>
+</html>

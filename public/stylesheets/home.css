@@ -1,0 +1,589 @@
+section{
+    margin-bottom: 50px;
+}
+
+section h3{
+    font-size: 30px;
+}
+
+
+/* =================================== introduction start =================================== */
+
+.intro{
+    display: flex;
+    /* border: solid 1px #fff */
+}
+
+.intro .left{
+    padding-top: 130px;
+}
+
+.intro .right{
+    padding-top: 70px;
+}
+
+.intro .right img{
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 
+                0 0 40px rgba(255, 255, 255, 0.1),
+                0 0 60px rgba(255, 255, 255, 0.1),
+                0 0 80px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.intro h1{
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+
+.intro p{
+    font-size: 18px;
+    color: var(--main-text-gray);
+    line-height: 25px;
+}
+
+.intro .desc{
+    color: var(--dark-text-color);
+}   
+
+.intro .headline{
+    margin-bottom: 16px;
+}
+
+.intro .span-highlight{
+    border: solid 0.8px var(--text-hightlight-border-color);
+    padding: 2px 6px;
+    border-radius: 8px;
+    background-color: var(--text-hightlight-bg-color);
+    color: var(--text-hightlight-color);
+    margin: 0 2px;
+}
+
+@media (max-width: 1024px) {
+
+    .intro{
+        flex-direction: column-reverse;
+        margin-top: 50px;
+    }
+
+    .intro .left{
+        padding-top: 20px;
+    }
+    
+    .intro .right{
+        padding-top: 0px;
+    }
+
+    .intro .right img{
+        height: 130px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 
+                    0 0 20px rgba(255, 255, 255, 0.1),
+                    0 0 30px rgba(255, 255, 255, 0.1),
+                    0 0 40px rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+/* =================================== introduction end =================================== */
+
+
+/* =================================== blogs start =================================== */
+
+.blogs{
+    margin-bottom: 50px;
+}
+
+.blogs .blog-head{
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.blogs .show-more{
+    margin-top: 0px;
+}
+
+.blogs-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.blogs-card .text-parent{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-hightlight-color);
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 20px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px ;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: var(--card-bg-color);
+}
+
+.blogs .pagination-styles{
+    bottom: -20px;
+}
+
+
+
+/* =================================== blogs end =================================== */
+
+
+
+/* =================================== skills start =================================== */
+
+.skill-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.skill-card{
+    /* border-bottom: solid 1px var(--card-lt-border-color); */
+    /* padding: 10px; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.skill-card:first-child{
+    margin-top: 0px;
+}
+
+.skill-el{
+    font-size: 14px;
+    font-style: italic;
+    color: var(--text-hightlight-color);
+    border: solid 1px var(--tag-border-color);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 0px 8px 8px 0px;
+    background-color:  var(--card-bg-color);
+}
+
+/* =================================== skills end =================================== */
+
+
+/* =================================== experience start =================================== */
+
+.experience-card{
+    display: flex;
+    margin-top: 40px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px ;
+    padding: 20px;
+}
+
+.experience-card:nth-child(2){
+    margin-top: 25px;
+}
+
+.experience-card .text-parent .head-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.experience-card .text-parent a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.experience-card .text-parent .exp-logo{
+    height: 40px;
+    cursor: pointer;
+}
+
+.experience-card .text-parent .click-icon{
+    cursor: pointer;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.experience-card .text-parent .duration{
+    color: var(--main-text-gray);
+    font-size: 14px;
+}
+
+
+.experience-card .text-parent .exp-el div{
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--card-text-color);
+    margin-bottom: 8px;
+}
+
+.experience-card .text-parent .exp-el:last-child div{
+    margin-bottom: 0px;
+}
+
+.experience-card .text-parent .exp-el{
+    display: flex;
+    align-items: flex-start;
+}
+
+.experience-card .text-parent .exp-el img{
+    height: 18px;
+    margin-right: 8px;
+    padding-top: 2px;
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .experience-card .text-parent .exp-logo{
+        height: 32px;
+    }
+}
+/* =================================== experience stop =================================== */
+
+/* =================================== projects start =================================== */
+
+
+.projects-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projects-card{
+    width: 48%;
+    flex-wrap: wrap;
+    display: flex;
+    /* margin-top: 40px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px ; */
+    padding: 20px;
+    justify-content: flex-start;
+    margin-top: 25px;
+    border: solid 1px var(--card-lt-border-color);
+    border-radius: 20px ;
+    margin-bottom: 8px;
+}
+
+.projects-card:last-child{
+    margin-bottom: 0px;
+}
+
+.projects-card:nth-child(2){
+    /* margin-top: 25px; */
+
+    margin-top: 20px;
+}
+
+.projects-card img{
+    height: 32px;
+}
+
+.projects-card .text-parent{
+    /* padding: 0 120px 0 30px; */
+    padding: 0 30px;
+    /* width: 400px; */
+
+    padding: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.projects-card .text-parent h4{
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: var(--card-heading-color);
+    font-weight: 600;
+}
+
+.projects-card .text-parent .text{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--card-text-color);
+    margin-bottom: 16px;
+    font-weight: 200;
+}
+
+.projects-card .text-parent .tag-parent{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.projects-card .text-parent .tag-parent span{
+    font-size: 12px;
+    font-style: italic;
+    color: var(--text-hightlight-color);
+    border: solid 1px var(--tag-border-color);
+    border-radius: 3px;
+    padding: 2px 5px;
+    margin: 0px 8px 8px 0px;
+    background-color:  var(--card-bg-color);
+}
+
+.projects-card .text-parent .links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects-card .text-parent .links a{
+    color: var(--main-text-gray);
+    text-decoration: none;
+    border-bottom: solid 1px var(--main-text-gray);
+}
+
+.projects-card .text-parent .links a img{
+    height: 15px;
+    margin-left: 5px;
+}
+
+.show-more{
+    width: auto;
+    text-align: center;
+    color: var(--text-hightlight-color);
+    margin-top: 20px;
+}
+
+.show-more button{
+    background-color: transparent;
+    outline: none;
+    color: var(--text-hightlight-color);
+    border: none;
+    border-bottom: double 1px var(--tag-border-color);
+	padding: 0;
+    padding-bottom: 5px;
+	font: inherit;
+	cursor: pointer;
+    font-weight: 200;
+}
+
+.show-more img{
+    height: 15px;
+    vertical-align: middle;
+}
+
+.show-more img{
+    transform: rotate(270deg);
+}
+
+@media (max-width: 1024px) {
+    .projects-card{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+}
+
+/* =================================== projects end =================================== */
+
+/* =================================== testimonials start =================================== */
+
+.testimonials{
+    margin-bottom: 70px;
+}
+
+.testimonials h3{
+    margin-bottom: 25px;
+}
+
+.testimonials-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin-top: 40px; */
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px ;
+    padding: 20px;
+    height: 240px;
+    color: var(--text-hightlight-color);
+}
+
+.testimonials-card .text-parent{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+.testimonials-card .head-wrap{
+    display: flex;
+}
+
+.testimonials-card .head-wrap .test-logo{
+    height: 60px;
+    border-radius: 50px;
+}
+
+.testimonials-card .head-wrap .details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+    /* font-weight: 400; */
+}
+
+.testimonials-card .head-wrap .details .name{
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.testimonials-card .head-wrap .details .designation{
+    font-size: 14px;
+}
+
+.testimonials .pagination-styles{
+    bottom: -40px;
+}
+
+
+@media (max-width: 1024px) {
+    .testimonials-card{
+        height: 360px;
+    }
+}
+
+/* =================================== testimonials end =================================== */
+
+
+/* =================================== whatsapp start =================================== */
+
+.whatsapp-card{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--card-text-color);
+    padding: 8px 20px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+}
+
+.whatsapp-card img{
+    height: 25px;
+    margin-right: 8px;
+    margin-bottom: -4px;
+}
+
+.whatsapp-card span{
+    display: inline-block;
+    padding: 5px 0px;
+}
+
+/* =================================== whatsapp end =================================== */
+
+.hr-break{
+    border: 1px solid var(--footer-border-color);
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.msg-text{
+    margin-top: 18px;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--main-text-gray);
+    line-height: 25px;
+}
+
+/* =================================== contact start =================================== */
+
+.contact h3{
+    margin-bottom: 25px;
+}
+
+.contact-card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px ;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.contact-card label{
+    color: var(--card-text-color);
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.row-name, .row-email{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 49%;
+}
+
+.row-name input, .row-email input{
+    height: 30px;
+    border-radius: 5px;
+}
+
+.row-one, .row-two{
+    margin-bottom: 20px;
+}
+
+.row-one{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-two{
+    display: flex;
+    flex-direction: column;
+}
+
+.row-two textarea{
+    height: 110px;
+}
+
+
+.row-three{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.row-three button{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--card-text-color);
+    padding: 8px 20px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+    background-color: transparent;
+}
+
+.contact-card input,
+.contact-card textarea {
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    color: var(--text-hightlight-color);
+    border: solid 1px var(--footer-border-color);
+    padding: 18px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+
+
+@media (max-width: 1024px) {
+    .row-one{
+        flex-direction: column;
+    }
+
+    .row-email label{
+        margin-top: 10px;
+    }
+}
+/* =================================== contact stop =================================== */

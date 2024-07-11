@@ -1,0 +1,168 @@
+section{
+    margin-bottom: 50px;
+}
+
+section h3{
+    font-size: 30px;
+}
+
+
+/* =================================== introduction start =================================== */
+
+.intro{
+    margin-bottom: 25px;
+}
+ 
+.intro h1{
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.intro p{
+    font-size: 18px;
+    color: var(--main-text-gray);
+    line-height: 25px;
+}
+
+.intro .span-highlight{
+    border: solid 0.8px var(--text-hightlight-border-color);
+    padding: 2px 6px;
+    border-radius: 8px;
+    background-color: var(--text-hightlight-bg-color);
+    color: var(--text-hightlight-color);
+    margin: 0 2px;
+}
+/* =================================== introduction end =================================== */
+
+/* =================================== whatsapp start =================================== */
+
+.whatsapp-card{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--card-text-color);
+    padding: 8px 20px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+}
+
+.whatsapp-card img{
+    height: 25px;
+    margin-right: 8px;
+    margin-bottom: -4px;
+}
+
+.whatsapp-card span{
+    display: inline-block;
+    padding: 5px 0px;
+}
+
+/* =================================== whatsapp end =================================== */
+
+.hr-break{
+    border: 1px solid var(--footer-border-color);
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.msg-text{
+    margin-top: 18px;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--main-text-gray);
+    line-height: 25px;
+}
+
+/* =================================== contact start =================================== */
+
+.contact-card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px ;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.contact-card label{
+    color: var(--card-text-color);
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.row-name, .row-email{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 49%;
+}
+
+.row-name input, .row-email input{
+    height: 30px;
+    border-radius: 5px;
+}
+
+.row-one, .row-two{
+    margin-bottom: 20px;
+}
+
+.row-one{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-two{
+    display: flex;
+    flex-direction: column;
+}
+
+.row-two textarea{
+    height: 110px;
+}
+
+
+.row-three{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.row-three button{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--card-text-color);
+    padding: 8px 20px;
+    border: solid 1px var(--card-border-color);
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+    background-color: transparent;
+}
+
+.contact-card input,
+.contact-card textarea {
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    color: var(--text-hightlight-color);
+    border: solid 1px var(--footer-border-color);
+    padding: 18px;
+    font-size: 14px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .row-one{
+        flex-direction: column;
+    }
+
+    .row-email label{
+        margin-top: 10px;
+    }
+}
+/* =================================== contact stop =================================== */
