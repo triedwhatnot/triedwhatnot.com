@@ -13,22 +13,44 @@
             <label>Name</label>
             <input 
                 class="name" 
+                type="text"
                 placeholder="Enter your name here" 
                 minlength="2" 
-                maxlength="50" 
-                pattern="[A-Za-z\s]+"
+                maxlength="30"
+                id="contact-name"
+                pattern="[A-Za-z][A-Za-z'\- ]+" 
+                title="Name should only contain letters, spaces, apostrophes, and hyphens."     
+                required
             />
         </div>
         <div class="row-email">
             <label>Email</label>
-            <input class="email" placeholder="Enter your email here" />
+            <input 
+                type="email"
+                class="email" 
+                placeholder="Enter your email here" 
+                id="contact-email"
+                pattern=/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/
+                title="Please enter a valid email address."
+                required
+            />
         </div>
     </div>
     <div class="row-two">
         <label>Message</label>
-        <textarea class="message" placeholder="Enter your message here"></textarea>
+        <textarea 
+            class="message" 
+            placeholder="Enter your message here"
+            id="contact-message"
+            minlength="2" 
+            maxlength="500"
+            pattern="/^[\w\s\p{P}]*$/"
+            required
+        ></textarea>
     </div>
     <div class="row-three">
-        <button>Send</button>
+        <button 
+        id="contact-form-submit"
+        >Send</button>
     </div>
 </div>

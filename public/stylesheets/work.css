@@ -177,6 +177,7 @@ section h3{
 
 .projects-card img{
     height: 32px;
+    padding-left: 5px;
 }
 
 .projects-card .text-parent{
