@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+    <!-- Font Awesome Icons -->
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous"
+    />
+
+    <title>Grocery store</title>
+    <link href="/icons/grocery.svg" rel="icon" />
+
+
+    <style>
+
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            
+            html{
+                scroll-behavior: smooth;
+            }
+            
+            .jumbotron h1{
+            font-size: 3em;;
+            }
+            
+            .carousel-item img{
+                height: 80vh;
+                width: 100vw;
+                transform: scaleY(2);
+            }
+
+            .dropdown .dropdown-menu .dropdown-item:focus{
+                background-color:rgb(58, 173, 50);
+              }
+              
+            @media screen and (max-width: 576px) 
+            {  .carousel .carousel-inner .carousel-item img {
+                height: 40vh;
+              }
+
+            }
+    </style>
+</head>
+
+<body>
+
+    <div class="jumbotron mb-0">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fas fa-store fa-5x ml-4 d-none d-md-inline mr-3"></i>
+                </div>
+                <div class="col-md-6 text-center">
+                    <h1 class="d-inline">Welcome to your own Grocery Store...</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+           
+     <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md bg-success navbar-dark sticky-top">
+    <div class="container">
+        <div class="navbar-brand">
+               <i class="fa fa-shopping-basket fa-2x"></i>
+        </div>
+        
+        <!--navbar toggle button-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+
+    
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <!-- Dropdown -->
+                <li class="nav-item dropdown mr-3">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Select City
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Bangalore</a>
+                    <a class="dropdown-item" href="#">Delhi</a>
+                    <a class="dropdown-item" href="#">Mumbai</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item mr-3">
+                        <a class="nav-link" href="#" data-toggle="tooltip" title="Shop at outlet">Nearest store</a>
+                </li>
+                <li class="nav-item mr-3">
+                        <a class="nav-link" href="#contact" data-toggle="tooltip" title="Have a query?">Contact us</a>
+                    </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="#" data-toggle="tooltip" title="Login to view your cart">My cart</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="#" data-toggle="tooltip" title="Order now">Login</a>
+                </li>       
+            
+            </ul>
+        </div>
+    </div>
+      </nav>
+
+<!--carousel-->
+<div id="demo" class="carousel slide container" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1534723452862-4c874018d66d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="store">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1557333610-90ee4a951ecf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="veggies">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1549588246-9a455c9c788c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="drinks">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+
+<!--section products-->
+<section class="products container">
+    <h2 class="text-center mt-4">Our Best Selling Products</h2>
+
+    <div class="row mt-4">
+        <div class="col-md-3 mx-auto" style="height: 200px;width: 200px;">
+            <img class="img-thumbnail float-left " style="height: 100%;width: 100%;" src="https://images.unsplash.com/photo-1555965174-f2334b1c0618?ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80" alt="choco dips"> 
+        </div>
+
+        <div class="col-md-9 text-center my-auto">
+            <p>We are offering Choco Dip (Ready To Use) of fine quality and are used for Ice cream bar coatings.. 
+                Moreover, these are developed from exquisite techniques and are available in Plain and Milk. 
+                They are made using the Refined Coconut Oil, Hydrogenated Vegetable Fat, Malaysian Alkalized Cocoa Powder.</p>
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+            <div class="col-md-3 mx-auto" style="height: 200px;width: 200px;">
+                    <img class="img-thumbnail float-left" style="height: 100%;width: 100%;" src="https://images.unsplash.com/photo-1556767576-5ec41e3239ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80" alt="cold drink"> 
+                </div> 
+       
+        <div class="col-md-9 text-center my-auto">
+                <p >Soft drink, any of a class of nonalcoholic beverages, usually but not necessarily carbonated, normally containing a natural or artificial sweetening agent,
+                     edible acids, natural or artificial flavours, and sometimes juice. Natural flavours are derived from fruits, nuts, berries, roots, herbs, and other plant sources. Coffee, tea, milk, cocoa, 
+                     and undiluted fruit and vegetable juices are not considered soft drinks.</p>
+        </div>
+            
+           
+    </div>
+
+        <div class="row mt-3">
+            <div class="col-md-3 mx-auto" style="height: 200px;width: 200px;">
+                <img class="img-thumbnail float-left" style="height: 100%;width: 100%;" src="https://images.unsplash.com/photo-1556767576-cf0a4a80e5b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80" alt="cereals"> 
+            </div>
+    
+            <div class="col-md-9 text-center align-middle my-auto">
+                <p>Breakfast cereal (or simply cereal) is a traditional breakfast food made from processed
+                     cereal grains, primarily in Western societies. Warm cereals like porridge and grits have the longest history. 
+                     Ready-to-eat cold cereals, appearing around the late 19th century, are most often mixed with milk (traditionally cow's milk), 
+                     but can also be paired with yogurt instead or eaten plain.</p>
+            </div>
+        
+        </div>
+
+        <div class="alert alert-success alert-dismissible mt-3 text-center fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Hurry!</strong> Sale ends in <strong>2hrs.</strong>
+        </div>
+
+</section>
+
+<!--salesman of the month-->
+<section class="salesman my-5">
+
+<div class="head-sales container text-center my-4">
+    <h2 class="my-2">Performer Of The Month</h2>
+</div>
+        <div class="card container" style="width:300px">
+                <img class="card-img-top" src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">Suraj Aggarwal</h4>
+                  <p class="card-text">Works in Koramangla, Bangalore branch.</p>
+                  <a href="#" class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal">See Profile</a>
+
+                        <!-- The Modal -->
+                        <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                        
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                <h4 class="modal-title">Suraj Aggarwal</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                        
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                A hardworker husband, father and employee. Suraj works for 6 days-a-week
+                                at our Koramangla Outlet in Bangalore and has won the performer of the month prize.
+                                    We wish him good luck and look forward to many such occurence. 
+                                </div>
+                        
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                        
+                            </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+<!--progress bar-->
+    <div class="progress container my-5" style="height: 25px;width: 75%;">
+        <div class="progress-bar text-uppercase bg-secondary" style="width:70%;height:25px;">Serving 70% of cities</div>
+    </div>
+
+</section>
+
+<!--outlets opening/closing hours-->
+<section class="timings container mt-5">
+    <div class="timing-head my-4 text-center">
+        <h2 class="">Outlets serving hours</h2>
+    </div>
+
+    <div class="text-center mx-auto" style="width: 90%;">
+            <table class="table table-hover table-bordered">
+                    <thead>
+                      <tr class="bg-success">
+                        <th>Day</th>
+                        <th>Hours</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Mon-Fri</td>
+                        <td>9am to 9pm</td>
+                      </tr>
+                      <tr>
+                        <td>Sat-Sun</td>
+                        <td>10am to 10pm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+    </div>
+
+</section>
+
+
+
+    <!-- Contact Us Section -->
+    <section class="container text-center p-5 mt-5" id="contact">
+            <h2 class="mb-5">Contact Us</h2>
+            <div class="row">
+              <div class="col-sm-4 mb-3 mb-sm-0">
+                <i class="fa fa-map-marker-alt fa-4x mb-3 text-success"></i>
+                <p class="mb-0"><strong>Reach us</strong></p>
+                <p>B-123, KG Marg, New-Delhi-123456</p>
+              </div>
+              <div class="col-sm-4 mb-3 mb-sm-0">
+                <i class="fa fa-phone fa-4x mb-3 text-success"></i>
+                <p class="mb-0"><strong>Call us</strong></p>
+                <p><a href="tel:9876543210">+91-1234567890</a></p>
+              </div>
+              <div class="col-sm-4 mb-3 mb-sm-0">
+                <i class="fa fa-envelope fa-4x mb-3 text-success"></i>
+                <p class="mb-0"><strong>Mail us</strong></p>
+                <p>query@grocery.com</p>
+              </div>
+            </div>
+          </section>
+      
+          <!-- Footer -->
+          <footer class="jumbotron mb-0">
+            <div class="container">
+              <div class="row">
+                <!-- Get Mail Subscribers -->
+                <div class="col-md-6 mb-5 mb-md-1">
+                  <form class="text-center">
+                    <label for="email" class="font-weight-bold text-success mb-4 form-group">
+                      Enter Email to receive daily updates on new offers.
+                    </label>
+                    <div class="form-group">
+                      <input
+                        type="email" class="form-control" id="email" placeholder="Enter Email" required>
+                      </div>
+                      <button type="submit" class="btn btn-success btn-block">
+                        SUBSCRIBE
+                      </button>
+                    </div>
+                    <!-- Social Icons -->
+                    <div class="col-md-6 text-success">
+                      <p class="font-weight-bold text-center mb-3">Follow Us Socially</p>
+                      <ul class="list-inline d-flex flex-row justify-content-center">
+                        <li><a href="#" class="text-success mx-3"><i class="fab fa-facebook fa-5x"></i></a></li>
+                        <li><a href="#" class="text-success mx-3"><i class="fab fa-twitter fa-5x"></i></a></li>
+                        <li><a href="#" class="text-success mx-3"><i class="fab fa-instagram fa-5x"></i></a></li>
+                      </ul>
+                    </div>
+                    
+                </div>
+              </div>
+          </footer>
+      
+          <!-- Final Footer -->
+          <div class="bg-success text-light text-center py-2">
+            &copy; 2019. All Rights Reserved.
+          </div>
+
+
+<!--Bootstrap js files-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        });
+        </script>
+</body>
+</html>
