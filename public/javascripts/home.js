@@ -1,7 +1,7 @@
 (()=>{
     window.addEventListener("load", () => {
 
-        document.getElementById("show-more-projects").addEventListener("click", function(){
+        document.getElementById("show-more-btn").addEventListener("click", function(){
             window.location.href = "/work#projects";
         });
 

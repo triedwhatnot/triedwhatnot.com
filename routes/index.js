@@ -5,12 +5,14 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('home', {
     activeNavbarEl: "home",
+    baseUrl: "http://localhost:3000"
   });
 });
 
 router.get('/work', function(req, res, next) {
   res.render('work', {
     activeNavbarEl: "work",
+    baseUrl: "http://localhost:3000"
   });
 });
 

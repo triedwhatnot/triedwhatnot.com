@@ -92,6 +92,11 @@ section h3{
     align-items: center;
 }
 
+.experience-card .text-parent .exp-el span{
+    font-weight: 800;
+    color: var(--exp-text-bold-color);
+}
+
 .experience-card .text-parent .exp-logo{
     height: 40px;
     cursor: pointer;
@@ -293,6 +298,7 @@ section h3{
     padding: 20px;
     height: 240px;
     color: var(--text-hightlight-color);
+    cursor: grab;
 }
 
 .testimonials-card .text-parent{

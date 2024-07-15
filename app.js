@@ -18,6 +18,15 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+
+
+app.use('/projects/react-testing-suite', express.static(path.join(__dirname, 'testing-suite', 'dist')));
+
+app.get('/projects/react-testing-suite/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'testing-suite', 'dist', 'index.html'));
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/projects', projectsRouter);
