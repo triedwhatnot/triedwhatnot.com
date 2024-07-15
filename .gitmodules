@@ -1,7 +1,0 @@
-[submodule "react-testing-suite"]
-    path = react-testing-suite
-    url = https://github.com/triedwhatnot/react-testing-suite
-
-[submodule "voice2post"]
-    path = voice2post
-    url = https://github.com/triedwhatnot/voice2post
