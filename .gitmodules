@@ -1,0 +1,3 @@
+[submodule "voice2post"]
+	path = voice2post
+	url = https://github.com/triedwhatnot/voice2post
