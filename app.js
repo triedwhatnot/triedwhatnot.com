@@ -19,12 +19,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+app.use('/projects/voice2post', express.static(path.join(__dirname, 'voice2post', 'dist')));
 
+app.get('/projects/voice2post/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'voice2post', 'dist', 'index.html'));
+});
 
-app.use('/projects/react-testing-suite', express.static(path.join(__dirname, 'testing-suite', 'dist')));
+app.use('/projects/react-testing-suite', express.static(path.join(__dirname, 'react-testing-suite', 'dist')));
 
 app.get('/projects/react-testing-suite/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'testing-suite', 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, 'react-testing-suite', 'dist', 'index.html'));
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
