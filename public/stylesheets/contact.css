@@ -75,6 +75,14 @@ section h3{
     line-height: 25px;
 }
 
+.msg-text span.success{
+    color: var(--green);
+}
+
+.msg-text span.failure{
+    color: var(--red);
+}
+
 /* =================================== contact start =================================== */
 
 .contact-card{

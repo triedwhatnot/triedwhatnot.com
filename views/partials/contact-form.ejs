@@ -5,7 +5,7 @@
 
 <hr class="hr-break" />
 
-<p class="msg-text">Or, drop in a message and I'll get back to you</p>
+<p class="msg-text">Or, drop in a message and I'll get back to you. <span id="res-text"></span></p>
 
 <div class="contact-card">
     <div class="row-one">
@@ -17,9 +17,7 @@
                 placeholder="Enter your name here" 
                 minlength="2" 
                 maxlength="30"
-                id="contact-name"
-                pattern="[A-Za-z][A-Za-z'\- ]+" 
-                title="Name should only contain letters, spaces, apostrophes, and hyphens."     
+                id="contact-name"    
                 required
             />
         </div>
@@ -30,8 +28,6 @@
                 class="email" 
                 placeholder="Enter your email here" 
                 id="contact-email"
-                pattern=/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/
-                title="Please enter a valid email address."
                 required
             />
         </div>
@@ -44,7 +40,6 @@
             id="contact-message"
             minlength="2" 
             maxlength="500"
-            pattern="/^[\w\s\p{P}]*$/"
             required
         ></textarea>
     </div>

@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var projectsRouter = require('./routes/projects');
+var dataRouter = require('./routes/data');
 
 var app = express();
 
@@ -16,28 +17,39 @@ app.set('view engine', 'ejs');
 // adding middlewares
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// /api/ routes
+app.use('/api/', dataRouter);
+
+// voice2post react app routes
 app.use('/projects/voice2post', express.static(path.join(__dirname, 'voice2post', 'dist')));
 app.get('/projects/voice2post/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'voice2post', 'dist', 'index.html'));
 });
 
+// react-testing-suite react app static resources route
 app.use('/projects/react-testing-suite', express.static(path.join(__dirname, 'react-testing-suite', 'coverage')));
 app.use('/projects/react-testing-suite', express.static(path.join(__dirname, 'react-testing-suite', 'dist')));
 
+// react-testing-suite coverage-report routes
 app.get('/projects/react-testing-suite/coverage-report', (req, res) => {
   res.sendFile(path.join(__dirname, 'react-testing-suite', 'coverage', 'index.html'));
 });
 
+// react-testing-suite react app routes
 app.get('/projects/react-testing-suite/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'react-testing-suite', 'dist', 'index.html'));
 });
 
-
+// all static resources
 app.use(express.static(path.join(__dirname, 'public')));
+
+// project routes
 app.use('/projects', projectsRouter);
+
+// index routes
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
