@@ -2,11 +2,14 @@
   "name": "triedwhatnot.com",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20.10.0"
+  },
   "scripts": {
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
     "serverstart": "DEBUG=triedwhatnot.com:* npm run devstart",
-    "build": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm run start"
+    "build": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci && npm run start"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
