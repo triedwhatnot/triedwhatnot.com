@@ -14,7 +14,7 @@
         document.getElementById("show-more-btn").addEventListener("click", function(){
             let innerText = document.querySelector("#show-more-btn button").innerText;
             let isVireMoreClick = innerText === "view more ";
-            document.querySelector("#show-more-btn button").innerHTML = isVireMoreClick ? "view less <img class='invert' src='/icons/arrow-down.svg'/>" : "view more <img src='/icons/arrow-down.svg'/>";
+            document.querySelector("#show-more-btn button").innerHTML = isVireMoreClick ? "view less <img alt='arrow up icon' class='invert' src='/icons/arrow-down.svg'/>" : "view more <img alt='arrow down icon' src='/icons/arrow-down.svg'/>";
 
             if(isVireMoreClick){
                 document.querySelectorAll(".projects .projects-card.hide").forEach(node => {
