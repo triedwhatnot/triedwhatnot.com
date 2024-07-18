@@ -6,10 +6,10 @@
     "node": ">=20.10.0"
   },
   "scripts": {
-    "start": "node ./bin/www",
+    "build": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
     "serverstart": "DEBUG=triedwhatnot.com:* npm run devstart",
-    "build": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci && npm run start"
+    "start": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci && npm run build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
