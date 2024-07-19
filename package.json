@@ -6,8 +6,8 @@
     "node": "~20.10.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "devstart": "nodemon server.js",
+    "start": "node ./api/index.js",
+    "devstart": "nodemon ./api/index.js",
     "serverstart": "DEBUG=triedwhatnot.com:* npm run devstart",
     "build": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci",
     "build-dev": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci && npm run start"

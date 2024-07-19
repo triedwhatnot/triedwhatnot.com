@@ -29,4 +29,8 @@ router.get('/type-racer', function(req, res, next) {
   res.render('projects/type-racer.ejs');
 });
 
+router.get('/', function(req, res, next) {
+  res.send('Not Found!!');
+});
+
 module.exports = router;

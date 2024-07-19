@@ -5,14 +5,14 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('home', {
     activeNavbarEl: "home",
-    baseUrl: "http://localhost:3000"
+    baseUrl: ""
   });
 });
 
 router.get('/work', function(req, res, next) {
   res.render('work', {
     activeNavbarEl: "work",
-    baseUrl: "http://localhost:3000"
+    baseUrl: ""
   });
 });
 
@@ -26,6 +26,10 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', {
     activeNavbarEl: "contact",
   });
+});
+
+router.get('/*', function(req, res, next) {
+  res.send('Not Found!!');
 });
 
 module.exports = router;
