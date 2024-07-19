@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "engines": {
-    "node": ">=20.10.0"
+    "node": "~20.10.0"
   },
   "scripts": {
-    "build": "node ./bin/www",
-    "devstart": "nodemon ./bin/www",
+    "start": "node server.js",
+    "devstart": "nodemon server.js",
     "serverstart": "DEBUG=triedwhatnot.com:* npm run devstart",
-    "start": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci && npm run build"
+    "build": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci",
+    "build-dev": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci && npm run start"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
