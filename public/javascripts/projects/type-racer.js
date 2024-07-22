@@ -52,6 +52,7 @@ window.addEventListener("load", function(){
       addWordToDOM();
   
       // focus on text on start
+      text.value = "";
       text.focus();
     }
   
@@ -98,7 +99,7 @@ window.addEventListener("load", function(){
     text.addEventListener("input", e => {
       const insertedText = e.target.value;
       // Check if the inserted text is equal to the random word
-      if (insertedText === randomWord) {
+      if (insertedText.toLowerCase() === randomWord.toLowerCase()) {
         addWordToDOM();
         increaseScore();
   
