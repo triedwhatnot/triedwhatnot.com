@@ -11,7 +11,14 @@ A portfolio website, built on node-express server, which serves multiple React a
 2. Asset optimisations for:
     - CSS
     - JS
-    - Images
+    - Images - compression, resize, format (webp) using [squoosh.app](https://squoosh.app/)
+
+
+## Deployment related pointers
+1. index routes contain a baseUrl key
+    - not being used, but still keep in mind
+2. .env updates to be added
+3. default port is 5173
 
 
 ## Learnings

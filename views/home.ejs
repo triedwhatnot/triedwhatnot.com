@@ -9,15 +9,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
 
-    <script src="/javascripts/home.js"></script>
-    <script src="/javascripts/common.js"></script>
-    <script src="/javascripts/contact-form.js"></script>
+    <script defer src="/javascripts/home.js"></script>
+    <script defer src="/javascripts/common.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous">
 
-    <link href="/stylesheets/common.css" rel="stylesheet">
-    <link href="/stylesheets/home.css" rel="stylesheet">
+    <!-- <link href="/stylesheets/common.css" rel="stylesheet">
+    <link href="/stylesheets/home.css" rel="stylesheet"> -->
+    <link rel="preload" href="/stylesheets/common.css"  as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/stylesheets/home.css"  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+    <!-- <link crossorigin rel="preload" href="/path/to/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/path/to/styles.css"></noscript> -->
 </head>
 <body class="dark">
 
@@ -34,7 +39,7 @@
                 <p class="desc">Software Engineer experienced in <span class="span-highlight">Frontend</span> engineering tech and maintaining high-traffic website in Fintech industry.</p>
             </div>
             <div class="right">
-                <img alt="owner's picture" src="/images/home_pic.png" />
+                <img alt="owner's picture" src="/images/home_pic.webp" />
             </div>
         </section>
 
@@ -111,7 +116,7 @@
             <%- include('partials/etmoney-exp.ejs') %>
 
             <div class="show-more" id="show-more-exp">
-                <button>view more <img alt="arrow down icon" src="/icons/arrow-down.svg"/></button>
+                <button>view more <img loading="lazy" alt="arrow down icon" src="/icons/arrow-down.svg"/></button>
             </div>
         </section>
         <!-- experience end -->
@@ -150,4 +155,6 @@
     
     
 </body>
+
+<script defer src="/javascripts/contact-form.js"></script>
 </html>
