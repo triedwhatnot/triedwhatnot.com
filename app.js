@@ -43,6 +43,49 @@ app.get('/projects/react-testing-suite/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'react-testing-suite', 'dist', 'index.html'));
 });
 
+// compression logic start
+
+// Middleware to serve Brotli-compressed files if supported
+// app.get('*.js', (req, res, next) => {
+//   if (req.headers['accept-encoding'].includes('br')) {
+//     req.url = req.url + '.br';
+//     res.set('Content-Encoding', 'br');
+//     res.set('Content-Type', 'application/javascript');
+//   }
+//   next();
+// });
+
+// app.get('*.css', (req, res, next) => {
+//   if (req.headers['accept-encoding'].includes('br')) {
+//     req.url = req.url + '.br';
+//     res.set('Content-Encoding', 'br');
+//     res.set('Content-Type', 'text/css');
+//   }
+//   next();
+// });
+
+
+// // Middleware to serve gzip-compressed files if supported
+// app.get('*.js', (req, res, next) => {
+//   if (req.headers['accept-encoding'].includes('gzip') && !req.headers['accept-encoding'].includes('br')) {
+//     req.url = req.url + '.gz';
+//     res.set('Content-Encoding', 'gzip');
+//     res.set('Content-Type', 'application/javascript');
+//   }
+//   next();
+// });
+
+// app.get('*.css', (req, res, next) => {
+//   if (req.headers['accept-encoding'].includes('gzip') && !req.headers['accept-encoding'].includes('br')) {
+//     req.url = req.url + '.gz';
+//     res.set('Content-Encoding', 'gzip');
+//     res.set('Content-Type', 'text/css');
+//   }
+//   next();
+// });
+// // compression logic end
+
+
 // all static resources
 app.use(express.static(path.join(__dirname, 'public')));
 

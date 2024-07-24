@@ -1,8 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
+// router.get("*", (req, res, next) => {
+//   if (req.headers['accept-encoding'].includes('br')) {
+//     req.compressionExtension = '.br';
+//     res.set('Content-Encoding', 'br');
+//     res.set('Content-Type', 'text/html');
+//   }
+//   else if (req.headers['accept-encoding'].includes('gzip') && !req.headers['accept-encoding'].includes('br')) {
+//     req.compressionExtension = '.gz';
+//     res.set('Content-Encoding', 'gzip');
+//     res.set('Content-Type', 'text/html');
+//   }
+//   else req.compressionExtension = '';
+//   next();
+// });
+
 router.get('/grocery-store', function(req, res, next) {
-  res.render('projects/grocery-store-min.ejs');
+  res.render(`projects/grocery-store-min.ejs`);
 });
 
 router.get('/budgety', function(req, res, next) {

@@ -10,8 +10,17 @@ A portfolio website, built on node-express server, which serves multiple React a
 1. Server React apps and landing pages through one server.
 2. Asset optimisations for:
     - CSS
+        - cssnano -> to minify CSS
+        - post-css -> to add vendor prefixes for better  
     - JS
+        - babel -> used to transpile ES6 code to ES5 to make it compatible with older browser versions
+        - uglify -> to minify JS
     - Images - compression, resize, format (webp) using [squoosh.app](https://squoosh.app/)
+3. Further, compressed JS, CSS and EJS using brotli and gzip
+4. Used gulp to automate these minification and compression tasks
+    - series
+    - parallel
+
 
 
 ## Deployment related pointers

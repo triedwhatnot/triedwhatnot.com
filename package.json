@@ -6,12 +6,12 @@
     "node": "~20.10.0"
   },
   "scripts": {
-    "gulp-test": "gulp",
+    "gulp-task": "gulp",
     "start": "node ./api/index.js",
     "devstart": "nodemon ./api/index.js",
     "serverstart": "DEBUG=triedwhatnot.com:* npm run devstart",
-    "build": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci",
-    "build-dev": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci && npm run start"
+    "build": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci && npm run gulp-task",
+    "build-dev": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci && npm run gulp-task && npm run start"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -31,6 +31,8 @@
     "cssnano": "^7.0.4",
     "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
+    "gulp-brotli": "^3.0.0",
+    "gulp-gzip": "^1.4.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^10.0.0",
     "gulp-rename": "^2.0.0",

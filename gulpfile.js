@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const path = require('path');
 // css
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
@@ -9,6 +10,8 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 // ejs
 const htmlmin = require('gulp-htmlmin');
+const brotli = require('gulp-brotli');
+const gzip = require('gulp-gzip');
 
 // CSS task
 gulp.task('minify-css', function() {
@@ -53,7 +56,7 @@ gulp.task('minify-js', function() {
 
 // minify EJS 
 gulp.task('minify-ejs', function() {
-    return gulp.src(['./views/**/*.ejs', '!./views/**/*min.ejs']) // Source folder for EJS files
+    return gulp.src(['./views/**/*.ejs', '!./views/**/*-min.ejs']) // Source folder for EJS files
       .pipe(htmlmin({
         collapseWhitespace: true, // Remove extra white spaces
         removeComments: true, // Remove comments
@@ -64,5 +67,52 @@ gulp.task('minify-ejs', function() {
       .pipe(gulp.dest('views')); // Destination folder for minified EJS files
   });
 
+
+// Brotli compression task
+gulp.task('compress-br', () => {
+    return gulp.src(['./public/stylesheets/**/*.min.css', './public/javascripts/**/*.min.js', './views/**/*-min.ejs'])
+        .pipe(brotli.compress({
+            extension: 'br',
+            quality: 11
+        }))
+        .pipe(gulp.dest(function(file) {
+            // Define the base directories
+            const baseDirs = [
+                'public/stylesheets',
+                'public/javascripts',
+                'views'
+            ];
+            // Determine the output path for the compressed file
+            const dest = baseDirs.find(baseDir => file.path.includes(baseDir));
+            return dest;
+        }));
+});
+  
+// Gzip compression task
+gulp.task('compress-gz', () => {
+    return gulp.src(['./public/stylesheets/**/*.min.css', './public/javascripts/**/*.min.js', './views/**/*-min.ejs'])
+        .pipe(gzip({
+            append: true,
+            gzipOptions: {
+                level: 9
+            }
+        }))
+        .pipe(gulp.dest(function(file) {
+            // Define the base directories
+            const baseDirs = [
+                'public/stylesheets',
+                'public/javascripts',
+                'views'
+            ];
+            // Determine the output path for the compressed file
+            const dest = baseDirs.find(baseDir => file.path.includes(baseDir));
+            return dest;
+        }));
+});
+
 // Default task
-gulp.task('default', gulp.series('minify-css', 'minify-js', 'minify-ejs'));
+gulp.task('minify', gulp.parallel('minify-css', 'minify-js', 'minify-ejs'));
+
+gulp.task('compress', gulp.parallel('compress-br', 'compress-gz'));
+
+gulp.task('default', gulp.series('minify', 'compress'));
