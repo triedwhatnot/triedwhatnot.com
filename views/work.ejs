@@ -9,19 +9,19 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
 
-    <script src="/javascripts/work.js"></script>
-    <script src="/javascripts/common.js"></script>
+    <script src="/javascripts/work.min.js"></script>
+    <script src="/javascripts/common.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous">
 
-    <link href="/stylesheets/work.css" rel="stylesheet">
-    <link href="/stylesheets/common.css" rel="stylesheet">
+    <link href="/stylesheets/work.min.css" rel="stylesheet">
+    <link href="/stylesheets/common.min.css" rel="stylesheet">
 </head>
 <body class="dark">
     
     <!-- header start -->
-    <%- include('partials/header.ejs') %>
+    <%- include('partials/header-min.ejs') %>
     <!-- header end -->
 
     <div class="content-section">
@@ -32,22 +32,22 @@
         </section>
 
         <!-- skills start -->
-        <%- include('partials/skills.ejs') %>
+        <%- include('partials/skills-min.ejs') %>
         <!-- skills end -->
 
         <!-- experience start -->
         <section class="experience" id="experience">
             <h3>Experience</h3>
 
-            <!-- <%- include('partials/freelancing-exp.ejs') %> -->
+            <!-- <%- include('partials/freelancing-exp-min.ejs') %> -->
 
-            <%- include('partials/etmoney-exp.ejs') %>
+            <%- include('partials/etmoney-exp-min.ejs') %>
 
         </section>
         <!-- experience end -->
 
         <!-- projects start -->
-        <%- include('partials/projects.ejs') %>
+        <%- include('partials/projects-min.ejs') %>
         <!-- projects end -->
 
 
@@ -58,7 +58,7 @@
             <div class="splide" role="group" aria-label="testimonials carousel">
                 <div class="splide__track">
                       <ul class="splide__list">
-                        <%- include('partials/testimonials.ejs') %>
+                        <%- include('partials/testimonials-min.ejs') %>
                     </ul>
                 </div>
             </div>
@@ -69,7 +69,7 @@
         <!-- testimonials end -->
 
         <!-- footer start -->
-        <%- include('partials/footer.ejs') %>
+        <%- include('partials/footer-min.ejs') %>
         <!-- footer end -->
 
     </div>

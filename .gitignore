@@ -26,3 +26,8 @@ dist-ssr
 /coverage
 *.env
 .vercel
+
+*.min.js
+*.min.css
+*.min.ejs
+*-min.ejs

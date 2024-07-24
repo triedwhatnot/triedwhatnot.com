@@ -9,16 +9,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
 
-    <script defer src="/javascripts/home.js"></script>
-    <script defer src="/javascripts/common.js"></script>
+    <script defer src="/javascripts/home.min.js"></script>
+    <script defer src="/javascripts/common.min.js"></script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous">
 
-    <!-- <link href="/stylesheets/common.css" rel="stylesheet">
-    <link href="/stylesheets/home.css" rel="stylesheet"> -->
-    <link rel="preload" href="/stylesheets/common.css"  as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/stylesheets/home.css"  as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/stylesheets/common.min.css"  as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/stylesheets/home.min.css"  as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 
     <!-- <link crossorigin rel="preload" href="/path/to/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -27,7 +25,7 @@
 <body class="dark">
 
     <!-- header start -->
-    <%- include('partials/header.ejs') %>
+    <%- include('partials/header-min.ejs') %>
     <!-- header end -->
 
     <div class="content-section">
@@ -104,16 +102,16 @@
         <!-- blogs end -->
 
         <!-- skills start -->
-        <%- include('partials/skills.ejs') %>
+        <%- include('partials/skills-min.ejs') %>
         <!-- skills end -->
 
         <!-- experience start -->
         <section class="experience" id="experience">
             <h3>Experience</h3>
 
-            <!-- <%- include('partials/freelancing-exp.ejs') %> -->
+            <!-- <%- include('partials/freelancing-exp-min.ejs') %> -->
 
-            <%- include('partials/etmoney-exp.ejs') %>
+            <%- include('partials/etmoney-exp-min.ejs') %>
 
             <div class="show-more" id="show-more-exp">
                 <button>view more <img loading="lazy" alt="arrow down icon" src="/icons/arrow-down.svg"/></button>
@@ -122,7 +120,7 @@
         <!-- experience end -->
 
         <!-- projects start -->
-        <%- include('partials/projects.ejs') %>
+        <%- include('partials/projects-min.ejs') %>
         <!-- projects end -->
 
 
@@ -133,7 +131,7 @@
             <div id="testimonials-splide" class="splide" role="group" aria-label="testimonials carousel">
                 <div class="splide__track">
                       <ul class="splide__list">
-                        <%- include('partials/testimonials.ejs') %>
+                        <%- include('partials/testimonials-min.ejs') %>
                     </ul>
                 </div>
             </div>
@@ -144,17 +142,17 @@
         <!-- contact start -->
         <section class="contact" id="contact">
             <h3>Contact</h3>
-            <%- include('partials/contact-form.ejs') %>
+            <%- include('partials/contact-form-min.ejs') %>
         </section>
         <!-- contact end -->
 
         <!-- footer start -->
-        <%- include('partials/footer.ejs') %>
+        <%- include('partials/footer-min.ejs') %>
         <!-- footer end -->
     </div>
     
     
 </body>
 
-<script defer src="/javascripts/contact-form.js"></script>
+<script defer src="/javascripts/contact-form.min.js"></script>
 </html>
