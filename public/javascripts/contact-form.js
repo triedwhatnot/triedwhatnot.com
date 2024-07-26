@@ -9,7 +9,7 @@
 
         const namePattern = /^[A-Za-z][A-Za-z'\- ]+$/;
         const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-        const textareaPattern = /^[\w\s\p{P}!]*$/;
+        const textareaPattern = /^[\w\s.,@#$%&*()[\]{};:'"!-]*$/;
 
         const nameErrMsg = "Name should only contain letters, spaces, apostrophes, and hyphens." 
         const emailErrMsg = "Please enter a valid email address."

@@ -5,7 +5,7 @@ const fs = require('fs');
 require('dotenv').config();
 
 async function appendValues(data) {
-    const spreadsheetId = '1j5ZsDFhKtATX4d-1hAvYVffd-21Yi5t637tco9d_AWg';
+    const spreadsheetId = `${process.env.GOOGLE_SPREADSHEET_ID}`;
     const range = 'Sheet1!A:C';
     const valueInputOption = 'RAW';
 
