@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.triedwhatnot.com</loc>
+  <lastmod>2024-08-05T07:31:31+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/work</loc>
+  <lastmod>2024-08-05T07:31:31+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/contact</loc>
+  <lastmod>2024-08-05T07:31:31+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/documents/Shubham_Gupta_Resume.pdf</loc>
+  <lastmod>2024-08-05T07:31:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/resources</loc>
+  <lastmod>2024-08-05T07:31:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/projects/react-testing-suite/coverage-report</loc>
+  <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/projects/voice2post/</loc>
+  <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/projects/budgety</loc>
+  <lastmod>2024-08-05T07:31:31+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/projects/react-testing-suite/tic-tac-toe</loc>
+  <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/projects/hangman-game</loc>
+  <lastmod>2024-08-05T07:31:31+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/projects/memory-game</loc>
+  <lastmod>2024-08-05T07:31:31+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/projects/type-racer</loc>
+  <lastmod>2024-08-05T07:31:31+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/projects/stock-exchange</loc>
+  <lastmod>2024-08-05T07:31:31+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/projects/grocery-store</loc>
+  <lastmod>2024-08-05T07:31:31+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/projects/estelle-wealth</loc>
+  <lastmod>2024-08-05T07:31:31+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/projects/react-testing-suite/react-testing-suite/index.html</loc>
+  <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+  <priority>0.65</priority>
+</url>
+<url>
+  <loc>https://www.triedwhatnot.com/projects/react-testing-suite/index.html</loc>
+  <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
+
+
+</urlset>

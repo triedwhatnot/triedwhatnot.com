@@ -1,0 +1,6 @@
+# React testing suite coverage pages - blocking for SEO
+User-agent: *
+Disallow: /projects/react-testing-suite/react-testing-suite/
+
+# Sitemap
+Sitemap: https://www.triedwhatnot.com/sitemap.xml

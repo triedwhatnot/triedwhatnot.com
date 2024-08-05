@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <meta name="description" content="Get in touch with me through my contact details, WhatsApp chat link, and contact form. I'm available for inquiries, collaborations, and feedback, and will get back to you promptly.">
+    <meta name="author" content="Shubham Gupta">
+    <link rel="alternate" href="https://www.triedwhatnot.com/contact" hreflang="en">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <link rel="canonical" href="https://www.triedwhatnot.com/contact" />
+
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Shubham Gupta | Contact">
+    <meta property="og:description" content="Get in touch with me through my contact details, WhatsApp chat link, and contact form. I'm available for inquiries, collaborations, and feedback, and will get back to you promptly.">
+    <meta property="og:image" content="https://www.triedwhatnot.com/images/og_img.png">
+    <meta property="og:url" content="https://www.triedwhatnot.com/contact">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="triedwhatnot">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shubham Gupta | Contact">
+    <meta name="twitter:description" content="Get in touch with me through my contact details, WhatsApp chat link, and contact form. I'm available for inquiries, collaborations, and feedback, and will get back to you promptly.">
+    <meta name="twitter:image" content="https://www.triedwhatnot.com/images/og_img.png">
+    <meta name="twitter:site" content="@triedwhatnot">
 
     <script src="/javascripts/common.min.js"></script>
     <script src="/javascripts/contact-form.min.js"></script>
@@ -40,8 +62,26 @@
         <!-- footer start -->
         <%- include('partials/footer-min.ejs') %>
         <!-- footer end -->
-    </div>
-    
-    
+    </div>   
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Contact",
+            "url": "https://www.triedwhatnot.com/contact",
+            "description": "Get in touch with me through my contact details, WhatsApp chat link, and contact form. I'm available for inquiries, collaborations, and feedback, and will get back to you promptly.",
+            "mainEntity": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Support",
+            "email": "triedwhatnot@gmail.com",
+            "telephone": "+91-9873120444",
+            "contactOption": "TollFree",
+            "availableLanguage": "English, Hindi"
+            },
+            "sameAs": [
+                "https://api.whatsapp.com/send/?phone=919873120444&text=Hi%2C+Shubham%21"
+            ]
+        }
+    </script>
 </body>
 </html>
