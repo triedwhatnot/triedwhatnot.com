@@ -10,6 +10,24 @@ var dataRouter = require('./routes/data');
 
 var app = express();
 
+if (process.env.NODE_ENV === 'production') {
+  // Trust the first proxy in front of your app
+  app.set('trust proxy', 1);
+
+  // Middleware to redirect HTTP to HTTPS
+  app.use((req, res, next) => {
+    console.log(req.headers, req.url)
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      // Redirect to HTTPS
+      res.redirect(`https://${req.headers.host}${req.url}`);
+    } else {
+      // Continue to the next middleware or route handler
+      next();
+    }
+  });
+}
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -19,6 +37,25 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+
+// security related headers
+app.use((req, res, next)=>{
+  // remove server related headers
+  res.removeHeader("X-Powered-By");
+  res.removeHeader("Server");
+
+  res.setHeader("X-Frame-Options", "deny");
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.setHeader("Permissions-Policy", "geolocation=(), microphone=(self), camera=(), fullscreen=(self), autoplay=(self), payment=()");
+  res.setHeader("Strict-Transport-Security", "max-age=63072000; includeSubDomains; preload");
+  
+  res.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://code.jquery.com https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://code.ionicframework.com https://stackpath.bootstrapcdn.com https://use.fontawesome.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com https://code.ionicframework.com https://use.fontawesome.com; object-src 'none'; media-src 'self'; frame-src 'self'; child-src 'self'; frame-ancestors 'self'; form-action 'self'; base-uri 'self';");
+  
+
+
+  next();
+});
 
 // /api/ routes
 app.use('/api/', dataRouter);
