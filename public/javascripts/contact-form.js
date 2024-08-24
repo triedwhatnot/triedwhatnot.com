@@ -21,14 +21,14 @@
             // nameEl.checkValidity();
         }
 
-        function disablePasteInInputs(e){
-            e.preventDefault();
-            return;
-        }
+        // function disablePasteInInputs(e){
+        //     e.preventDefault();
+        //     return;
+        // }
 
-        nameEl.addEventListener("paste", disablePasteInInputs);
-        emailEl.addEventListener("paste", disablePasteInInputs);
-        textareaEl.addEventListener("paste", disablePasteInInputs); 
+        // nameEl.addEventListener("paste", disablePasteInInputs);
+        // emailEl.addEventListener("paste", disablePasteInInputs);
+        // textareaEl.addEventListener("paste", disablePasteInInputs); 
 
         nameEl.addEventListener("input", resetCustomValidity);
         emailEl.addEventListener("input", resetCustomValidity);
