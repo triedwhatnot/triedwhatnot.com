@@ -1,16 +1,18 @@
-# React + Vite
+# 🔢 React OTP Input Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, reusable **OTP Input Component** built in **React** — inspired by *Akshay Saini’s* LLD explanations and designed to mimic real-world machine coding round problems.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- Custom OTP length (4, 6, 8, etc.)
+- Auto-focus next input on typing
+- Handles **Backspace/Delete** and **Arrow (← →)** navigation
+- Disables submit until all inputs are filled
+- Pure React implementation — no external libraries
+- Clean, accessible UI with active input highlighting
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+demo: https://triedwhatnot.com/projects/otp-component
