@@ -60,6 +60,12 @@ app.use((req, res, next)=>{
 // /api/ routes
 app.use('/api/', dataRouter);
 
+// otp-component react app routes
+app.use('/projects/otp-component', express.static(path.join(__dirname, 'otp-component', 'dist')));
+app.get('/projects/otp-component/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'otp-component', 'dist', 'index.html'));
+});
+
 // tic-tac-toe react app routes
 app.use('/projects/tic-tac-toe', express.static(path.join(__dirname, 'tic-tac-toe', 'dist')));
 app.get('/projects/tic-tac-toe/*', (req, res) => {
