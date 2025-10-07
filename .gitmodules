@@ -4,3 +4,9 @@
 [submodule "react-testing-suite"]
 	path = react-testing-suite
 	url = https://github.com/triedwhatnot/react-testing-suite
+[submodule "tic-tac-toe"]
+	path = tic-tac-toe
+	url = https://github.com/triedwhatnot/tic-tac-toe
+[submodule "traffic-light-v2"]
+	path = traffic-light-v2
+	url = https://github.com/triedwhatnot/traffic-light-v2

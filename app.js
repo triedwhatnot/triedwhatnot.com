@@ -60,6 +60,18 @@ app.use((req, res, next)=>{
 // /api/ routes
 app.use('/api/', dataRouter);
 
+// tic-tac-toe react app routes
+app.use('/projects/tic-tac-toe', express.static(path.join(__dirname, 'tic-tac-toe', 'dist')));
+app.get('/projects/tic-tac-toe/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'tic-tac-toe', 'dist', 'index.html'));
+});
+
+// traffic-light react app routes
+app.use('/projects/traffic-light-v2', express.static(path.join(__dirname, 'traffic-light-v2', 'dist')));
+app.get('/projects/traffic-light-v2/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'traffic-light-v2', 'dist', 'index.html'));
+});
+
 // voice2post react app routes
 app.use('/projects/voice2post', express.static(path.join(__dirname, 'voice2post', 'dist')));
 app.get('/projects/voice2post/*', (req, res) => {

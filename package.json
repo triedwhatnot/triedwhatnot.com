@@ -11,7 +11,7 @@
     "devstart": "nodemon ./api/index.js",
     "serverstart": "DEBUG=triedwhatnot.com:* npm run devstart",
     "build": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci && npm run gulp-task",
-    "build-dev": "npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci && npm run gulp-task && npm run start"
+    "build-dev": "npm --prefix ./traffic-light-v2 run build && npm --prefix ./tic-tac-toe run build && npm --prefix ./voice2post run build && npm --prefix ./react-testing-suite run build-deploy && npm ci && npm run gulp-task && npm run start"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
