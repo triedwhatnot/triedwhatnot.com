@@ -60,6 +60,12 @@ app.use((req, res, next)=>{
 // /api/ routes
 app.use('/api/', dataRouter);
 
+// stopwatch react app routes
+app.use('/projects/stopwatch', express.static(path.join(__dirname, 'stopwatch', 'dist')));
+app.get('/projects/stopwatch/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'stopwatch', 'dist', 'index.html'));
+});
+
 // otp-component react app routes
 app.use('/projects/otp-component', express.static(path.join(__dirname, 'otp-component', 'dist')));
 app.get('/projects/otp-component/*', (req, res) => {
