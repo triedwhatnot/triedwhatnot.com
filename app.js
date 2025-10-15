@@ -50,7 +50,7 @@ app.use((req, res, next)=>{
   res.setHeader("Permissions-Policy", "geolocation=(), microphone=(self), camera=(), fullscreen=(self), autoplay=(self), payment=()");
   res.setHeader("Strict-Transport-Security", "max-age=63072000; includeSubDomains; preload");
   
-  res.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://code.jquery.com https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://code.ionicframework.com https://stackpath.bootstrapcdn.com https://use.fontawesome.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com https://code.ionicframework.com https://use.fontawesome.com; object-src 'none'; media-src 'self'; frame-src 'self'; child-src 'self'; frame-ancestors 'self'; form-action 'self'; base-uri 'self';");
+  res.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://code.jquery.com https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://code.ionicframework.com https://stackpath.bootstrapcdn.com https://use.fontawesome.com; img-src 'self' data: https://images.unsplash.com https://cdn-icons-png.flaticon.com https://encrypted-tbn0.gstatic.com https://i.pinimg.com; connect-src 'self' https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com https://code.ionicframework.com https://use.fontawesome.com; object-src 'none'; media-src 'self'; frame-src 'self'; child-src 'self'; frame-ancestors 'self'; form-action 'self'; base-uri 'self';");
   
 
 
@@ -59,6 +59,12 @@ app.use((req, res, next)=>{
 
 // /api/ routes
 app.use('/api/', dataRouter);
+
+// YoutubeChatUI react app routes
+app.use('/projects/YoutubeChatUI', express.static(path.join(__dirname, 'YoutubeChatUI', 'dist')));
+app.get('/projects/YoutubeChatUI/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'YoutubeChatUI', 'dist', 'index.html'));
+});
 
 // stopwatch react app routes
 app.use('/projects/stopwatch', express.static(path.join(__dirname, 'stopwatch', 'dist')));
