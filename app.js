@@ -60,6 +60,13 @@ app.use((req, res, next)=>{
 // /api/ routes
 app.use('/api/', dataRouter);
 
+
+// NestedCheckboxes react app routes
+app.use('/projects/NestedCheckboxes', express.static(path.join(__dirname, 'NestedCheckboxes', 'dist')));
+app.get('/projects/NestedCheckboxes/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'NestedCheckboxes', 'dist', 'index.html'));
+});
+
 // YoutubeChatUI react app routes
 app.use('/projects/YoutubeChatUI', express.static(path.join(__dirname, 'YoutubeChatUI', 'dist')));
 app.get('/projects/YoutubeChatUI/*', (req, res) => {
