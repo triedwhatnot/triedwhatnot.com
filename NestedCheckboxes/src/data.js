@@ -1,4 +1,4 @@
-export const initalState = {
+export const initalState = [{
   id: 1,
   label: "Parent 1",
   isChecked: false,
@@ -60,4 +60,4 @@ export const initalState = {
       children: [],
     },
   ],
-};
+}];
